@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/welcome">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="welcome folks!"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="#070707"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Express Yourself"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:textSize="34sp"
+        android:textColor="#F78828"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inspire someone_X"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="34sp"
+        android:textColor="#06B2BB"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/have_an_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="'I have an account'"
+android:onClick="haveAccount"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"
+            android:textColor="#FCFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            app:cornerRadius="38dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="#06B2BB"
+            android:layout_marginLeft="5dp" >
+
+        </com.google.android.material.button.MaterialButton>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/have_an_account1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="'I m new here'"
+android:onClick="NewAccount"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"
+            android:textColor="#FCFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            app:cornerRadius="38dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F78828"
+            android:layout_marginLeft="5dp" >
+
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+</LinearLayout>

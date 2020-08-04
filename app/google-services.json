@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "286051927774",
+    "firebase_url": "https://dilkibaat-3ea78.firebaseio.com",
+    "project_id": "dilkibaat-3ea78",
+    "storage_bucket": "dilkibaat-3ea78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286051927774:android:c1242a4099e2536388e44f",
+        "android_client_info": {
+          "package_name": "com.example.dilkibaat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286051927774-sv8rbrtstglp4ui0fofpl8ul0brekaci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dilkibaat",
+            "certificate_hash": "08daa38e52329cb0ebc4cba7349a476788363bde"
+          }
+        },
+        {
+          "client_id": "286051927774-5nk2dgbb5fkvs8v07tkufa1pkhqr2snk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX6T-lQ6LyePriWd9nQk0DSzxO-KgOFhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286051927774-5nk2dgbb5fkvs8v07tkufa1pkhqr2snk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

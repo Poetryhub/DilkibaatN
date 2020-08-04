@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Homepage">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFF"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Light">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/main_toolbar"
+                app:title="@string/app_name"
+                android:gravity="center"
+                app:titleMarginEnd="20dp"
+                android:paddingLeft="160dp"
+                android:layout_gravity="center"
+                style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:menu="@menu/top_bar_menu"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:scrollbars="horizontal"
+    android:layout_marginTop="15dp"
+    android:id="@+id/category_recyclerview"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/imageviewboundary">
+    </com.google.android.material.textfield.TextInputLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:scrollbars="horizontal"
+    android:layout_marginTop="15dp"
+    android:id="@+id/post_recyclerview"/>
+</LinearLayout>
