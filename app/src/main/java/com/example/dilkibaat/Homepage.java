@@ -1,13 +1,23 @@
 package com.example.dilkibaat;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 import java.util.ArrayList;
 
@@ -41,9 +51,51 @@ private RecyclerView recyclerView , recyclerViewpost ;
         recyclerViewpost.setLayoutManager(layoutManager1);
 
 
+        setPOstRecyclerView();
 
 
     }
+
+    private void setPOstRecyclerView() {
+        RecyclerView PostRecyclerView=findViewById(R.id.post_recyclerview);
+        PostRecyclerView.setHasFixedSize(true);
+        PostRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        Query query = FirebaseDatabase.getInstance()
+                .getReference()
+                .child("posts");
+
+        FirebaseRecyclerOptions<PostModelClass> options =
+                new FirebaseRecyclerOptions.Builder<PostModelClass>()
+                        .setQuery(query, PostModelClass.class)
+                        .build();
+
+        FirebaseRecyclerAdapter adapter = new FirebaseRecyclerAdapter<PostModelClass, PostViewHolder>(options){
+
+            @NonNull
+            @Override
+            public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.post, parent, false);
+                return new PostViewHolder(view);
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull PostModelClass model) {
+
+                holder.mPostTitle.setText(""+model.getTitle());
+                holder.mPostContent.setText("" +model.getContent());
+
+                Glide.with(Homepage.this).load(model.getImageurl()).
+                        into(holder.circularImageView);
+
+            }
+        };
+        adapter.startListening();
+        PostRecyclerView.setAdapter(adapter);
+
+
+    }
+
     private ArrayList<Category> eatFruits(){
 
         ArrayList<Category> list = new ArrayList<>();
